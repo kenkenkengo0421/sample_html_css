@@ -1,220 +1,85 @@
 @charset "utf-8";
 
-/*トップ設定*/
-/*スマホ用設定*/
+/*通常設定*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-
-/*トップ設定*/
-.top{
-  position: relative;
-  width: 100%;
-  height: 1024px;
+.top_base{
   background: #EFE5CB;
 }
 
-#topimg{
-  position: absolute;
-  width:63%;
-  height: 522px;
-  left: 0px;
-  top: 63px;
-  z-index:0;
+header, footer{
+  flex-direction:column;
+  width: 100%;
+  height: 117px;
+  background: #BFC9BD;
 }
 
-#topimg1{
-  position: absolute;
-  width: 510px;
-  height: 340px;
-  left: 683px;
-  top: 602px;
+main{
+  flex:1;
+  min-height:1800px;
 }
 
-#topimg2{
-  position: absolute;
-  width: 800px;
-  height: 457px;
-  left: -2px;
-  top: 1210px;
-  background: url(topimg2.jpg);
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-#samplepage{
-  position: relative;
-  width: 850px;
+/*右端のボックス1*/
+.samplepage_title_contents{
+  flex-direction:column;
+  width:50%;
+  max-width:848px;
+  display:flex;
+  margin-left: auto; 
+  margin-right: 0;
+  margin-top:-1600px;
+}
+
+.item_samplepage{
+  width: 100%;
   height: 172px;
-  left: 610px;
-  top: 0px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 900;
   font-size: 128px;
   color: #BFC9BD;
-  z-index:1;
 }
 
-.samplepage_1 {
-  position: absolute;
+.item_content{
   width: 469px;
   height: 89px;
   font-family: 'Inter';
   font-style: italic;
   font-weight: 300;
   font-size: 64px;
-  color: #C1D1E0;
+  color: #C1D1E0;  
+  margin-left: auto;
+}
+
+#item_content_1{
   text-decoration: none;
+  color:#C1D1E0;
 }
 
-#samplepage_1_pos1 {
-  left:975px;
-  top:235px;
+/*画像のボックス*/
+.img_content{
+  flex-direction:column;
+  width:50%;
+  max-width:913px;
+  display:flex;
+  margin-left:0;
+  margin-top:90px;
 }
 
-#samplepage_1_pos2 {
-  left:975px;
-  top:325px;
-}
-
-#samplepage_1_pos3 {
-  left:975px;
-  top:415px;
-}
-
-#samplepage_1_pos4 {
-  left:975px;
-  top:505px;
-}
-
-#samplepage_1_pos5 {
-  left:975px;
-  top:1200px;
-}
-
-#samplepage_1_pos6 {
-  left:975px;
-  top:1290px;
-}
-
-#samplepage_1_pos7 {
-  left:975px;
-  top:1380px;
-}
-
-#samplepage_1_pos8 {
-  left:975px;
-  top:1470px;
-}
-footer{
-  position: absolute;
-  top: 2000px; /* 一番下の要素 (pos8) より下の位置を指定 */
-  width: 100%;
-  left: 0px;
-  font-size: 25px;
- /* color: #BFC9BD;*/
-}
-#footer_end{
-  position: absolute;
-  width: 100%;
-  height: 250px;
-  left: 0px;
-  top: 2000px;
-  background: #BFC9BD;
+#img_content_1{
+  margin-left:300px;
 }
 
 /*スマホ用設定*/
-@media screen and (max-width:479px) {
-.top {
-  width: 100%;
-  height:2000px;
-  position:relative;
-  overflow:hidden;
-}
-
-#topimg{
-  position: absolute;
-  width: 232.81px;
-  height: 132.99px;
-  left: -0.02px;
-  top: 260px;
-  transform: rotate(0.16deg);
-}
-
-#topimg1{
-  position: absolute;
-  width: 214.39px;
-  height: 142.84px;
-  left: 300px;
-  top: 750px;
-  transform: rotate(0.16deg);
-}
-
-#topimg2{
-  position: absolute;
-  width: 800px;
-  height: 457px;
-  left: -2px;
-  top: 1320px;
-  background: url(topimg2.jpg);
-}
-
-#samplepage{
-  position: absolute;
-  width: auto;
-  white-space: nowrap;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 140px;
-  line-height: 48px;
-  color: #BFC9BD;
-  transform: rotate(0.16deg);
-  top: 0px;
-}
-
-#samplepage_1_pos1{
-   top: 300px;
-}
-
-#samplepage_1_pos2{
-   top: 400px;
-}
-
-#samplepage_1_pos3{
-   top: 500px;
-}
-
-#samplepage_1_pos4{
-   top: 600px;
-}
-
-#samplepage_1_pos5{
-   top: 1350px;
-}
-
-#samplepage_1_pos6{
-   top: 1450px;
-}
-
-#samplepage_1_pos7{
-   top: 1550px;
-}
-
-#samplepage_1_pos8{
-   top: 1650px;
-}
-footer{
-  position: absolute;
-  top: 2000px; /* 一番下の要素 (pos8) より下の位置を指定 */
-  width: 100%;
-  left: 0px;
-  font-size: 25px;
- /* color: #BFC9BD;*/
-}
-#footer_end{
-  position: absolute;
-  width: 100%;
-  height: 250px;
-  left: 0px;
-  top: 2000px;
-  background: #BFC9BD;
-}
-
+@media screen and (max-width: 480px) {

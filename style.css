@@ -1,3 +1,6 @@
+.body {
+  min-height:100vh;
+}
 
 .container { 
   background-color: #e6dfcb;
@@ -24,6 +27,7 @@
   font-weight: 900;
   font-size: 25px;
   color: #e6dfcb;
+  width:100%;
 }
 
 #footer_img{
@@ -59,7 +63,43 @@
 .main { 
   grid-area: main; 
   justify-items: center;
-  align-items: center;    
+  align-items: center;
+  color: #567947;
+}
+
+#p_content2{
+  padding: .5em .7em;
+  border-left: 5px solid #eb5a09;
+  color:#eb5a09;
+  font-weight:900;
+  font-family: cursive;
+}
+
+#p_content1{
+  padding: .5em .7em;
+  border-radius: 50px 0 0 50px;
+  background-color: #eb5a09;
+  color: #567947;
+  font-weight:900;
+  font-family: fantasy;
+}
+
+#p_content3{
+  align-items: center;
+  padding: .5em .7em;
+  background-color: #567947;
+  color: #eb5a09;
+  font-weight:900;
+  font-family: math;
+}
+
+#p_content_li{
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 1em;
+  border: 2px solid #567947;
+  font-weight:900;
+  font-family: system-ui;
 }
 
 .photo {  display: grid;
@@ -76,34 +116,72 @@
 
 .photo1{ 
   grid-area: photo1;
+  align-self: center;
 }
 
 .photo2{ 
-  grid-area: photo2;  
+  grid-area: photo2; 
+  align-self: center;  
 }
 
 .photo3 { 
   grid-area: photo3; 
+  align-self: center;
 }
 
 .photo1_comment { 
   grid-area: photo1_comment;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  color: #567947;
 }
 
 .photo2_comment { 
-  grid-area: photo2_comment;
+  grid-area: photo2_comment;  
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  color: #eb5a09;
 }
 
 .photo3_comment { 
   grid-area: photo3_comment; 
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  color: #567947;
 }
 
+.font_dan{font-family: 'Dancing Script', cursive;}
+.font_sans{font-family: sans-serif;}
+.font_fan{font-family: fantasy;}
+
 .photo_img{
-  width:350px;
+  width:90%;
   }
 
 .sub { 
   grid-area: sub;
+  border: 2px solid;
+  border-color:#ed5a09;
+  font-weight:700;
+  color:#ed5a09;
+}
+
+.sub_ui {
+  font-family: sans-serif;
+}
+
+input {
+  appearance: none;
+  border: 2px solid #ddd;
+  border-radius: 8px; /* 角丸 */
+  padding: 3px 3px;
+  font-size: 15px;
+  transition: border-color 0.3s; /* フォーカス時のアニメーション */
+  width:70%;
+  justify-self: center;
 }
 
 .center{

@@ -102,6 +102,16 @@
   font-family: system-ui;
 }
 
+#p_content4{
+    padding: .5em .7em;
+    border-left: 5px solid #eb5a09;
+    border-bottom: 3px solid #d2d2d2;
+    background-color: #f2f2f2;
+    color: #eb5a09;
+    font-weight:900;
+    font-family:fangsong;
+}
+
 .photo {  display: grid;
   grid-template-columns: 1.5fr 0.1fr 1.5fr;
   grid-template-rows: 0.3fr 0.3fr 0.3fr;
@@ -163,10 +173,11 @@
 
 .sub { 
   grid-area: sub;
-  border: 2px solid;
+  border-left: 2px solid;
   border-color:#ed5a09;
   font-weight:700;
   color:#ed5a09;
+  padding: 3px 3px;
 }
 
 .sub_ui {
@@ -176,15 +187,98 @@
 input {
   appearance: none;
   border: 2px solid #ddd;
-  border-radius: 8px; /* 角丸 */
+  border-radius: 8px;
   padding: 3px 3px;
   font-size: 15px;
-  transition: border-color 0.3s; /* フォーカス時のアニメーション */
   width:70%;
-  justify-self: center;
+  display: block;
+  margin: 10px auto;  
+}
+
+button{
+  background-color: #eb5a09;   
+  color: #e6dfcb; 
+  font-weight: 900;
+  font-size: 15px;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;  
 }
 
 .center{
-    justify-items: center;
+  justify-items: center;
   align-items: center;
 }
+
+
+
+/*スマホ設定*/
+@media screen and (max-width: 768px) {
+
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    
+    grid-template-areas:
+      "header"
+      "photo"
+      "main"
+      "sub"
+      "footer";
+  }
+
+  .header {
+    font-size: 40px;
+    padding: 20px 0;
+  }
+
+  .footer {
+    font-size: 16px;
+    padding: 20px 0;
+  }
+
+  .main {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #p_content_li {
+    padding: 10px;
+  }
+ 
+ .sub {
+    margin: 10px;
+    padding: 20px;
+    border-top: 2px solid;
+    border-left: 0px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .photo {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo1"
+      "photo1_comment"
+      "photo2"
+      "photo2_comment"
+      "photo3"
+      "photo3_comment";
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .photo_img {
+    width: 100%;
+  }
+  
+  .photo1_comment, .photo2_comment, .photo3_comment {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
